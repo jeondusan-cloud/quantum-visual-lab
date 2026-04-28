@@ -13,6 +13,7 @@
     "vite": "^8.0.10"
   },
   "dependencies": {
+    "fft-js": "^0.0.12",
     "katex": "^0.16.45",
     "plotly.js-dist-min": "^3.5.0"
   }

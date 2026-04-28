@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>양자 터널링 - Quantum Visual Lab</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <link rel="stylesheet" href="../../styles/page.css" />
+  </head>
+  <body>
+    <main class="container">
+
+      <!-- 헤더 -->
+      <header class="page-header">
+        <a href="../../../index.html" class="back-link">← 메인으로</a>
+        <h2>양자 터널링 시뮬레이터</h2>
+        <p>고전적으로는 넘을 수 없는 포텐셜 장벽을 파동함수가 투과하는 과정을 실시간으로 시뮬레이션합니다.</p>
+      </header>
+
+      <!-- 수식 영역 -->
+      <div class="math-container" id="math-equations"></div>
+
+      <!-- 컨트롤 패널 -->
+      <div class="control-panel" id="controls">
+        <div class="control-group">
+          <span class="control-label">패킷 폭 (σ)</span>
+          <div class="slider-container">
+            <input type="range" id="sigma-slider" min="1" max="8" step="0.5" value="3" />
+            <span class="slider-val" id="sigma-value">3.0</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <span class="control-label">장벽 폭 (a)</span>
+          <div class="slider-container">
+            <input type="range" id="barrier-width-slider" min="1" max="12" step="0.5" value="4" />
+            <span class="slider-val" id="barrier-width-value">4.0</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <span class="control-label">에너지 비율 (E/V₀)</span>
+          <div class="slider-container">
+            <input type="range" id="energy-ratio-slider" min="0.1" max="2.0" step="0.05" value="0.8" />
+            <span class="slider-val" id="energy-ratio-value">0.80</span>
+          </div>
+        </div>
+
+        <div class="control-group" style="align-self: end;">
+          <div class="sim-buttons">
+            <button id="btn-play" class="sim-btn sim-btn--primary">▶ 시작</button>
+            <button id="btn-pause" class="sim-btn" disabled>⏸ 일시정지</button>
+            <button id="btn-reset" class="sim-btn">↺ 초기화</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plotly 그래프 -->
+      <div id="plot-div" class="graph-container"></div>
+
+      <!-- 정보 카드 -->
+      <div class="info-card">
+        <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+          <div>
+            <div class="info-stat" id="info-T">투과율 T = —</div>
+            <div class="info-stat" id="info-R">반사율 R = —</div>
+          </div>
+          <div>
+            <div class="info-stat" id="info-time">시간 t = 0.00</div>
+            <div class="info-stat" id="info-norm">정규화 ∫|ψ|²dx = 1.000</div>
+          </div>
+        </div>
+        <div class="info-desc" id="info-desc">
+          시작 버튼을 누르면 파동패킷이 장벽을 향해 진행합니다. E/V₀ &lt; 1이면 고전적으로는 투과가 불가능하지만, 양자역학적으로는 일부 확률이 장벽을 통과합니다.
+        </div>
+      </div>
+
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
