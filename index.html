@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Visual Lab — 양자역학 시각화 실험실</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>Quantum Visual Lab</h1>
+        <p>양자역학의 세계를 직관적으로 이해하기 위한 인터랙티브 시각화 실험실입니다.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="visualizations">
+        <h2>시각화 실험 목록</h2>
+        <div class="card-grid">
+          <a href="src/pages/infinite-well.html" style="text-decoration: none; color: inherit;">
+            <article class="card">
+              <h3>파동함수 vs 확률밀도</h3>
+              <span class="badge" style="background-color: rgba(76, 201, 240, 0.2); border-color: var(--accent-color);">실행 가능</span>
+              <p>복소수 파동함수와 실제 관측 가능한 확률밀도의 관계를 탐구합니다.</p>
+            </article>
+          </a>
+          <article class="card">
+            <h3>기댓값 ≠ 최빈값</h3>
+            <span class="badge">Coming Soon</span>
+            <p>양자역학적 기댓값과 고전적 최빈값의 차이를 비대칭 포텐셜 우물을 통해 알아봅니다.</p>
+          </article>
+          <article class="card">
+            <h3>가우시안 파동패킷</h3>
+            <span class="badge">Coming Soon</span>
+            <p>불확정성 원리를 만족하는 가우시안 형태의 파동패킷이 시간에 따라 어떻게 퍼지는지 관찰합니다.</p>
+          </article>
+          <article class="card">
+            <h3>군속도 vs 위상속도</h3>
+            <span class="badge">Coming Soon</span>
+            <p>물질파가 이동할 때 파동의 위상속도와 파동패킷 전체의 군속도 차이를 시각화합니다.</p>
+          </article>
+          <article class="card">
+            <h3>양자 터널링</h3>
+            <span class="badge">Coming Soon</span>
+            <p>고전적으로는 넘을 수 없는 장벽을 양자역학적으로 통과하는 터널링 현상을 시뮬레이션합니다.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Made by 난이뫼</p>
+        <a href="#" class="github-link" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

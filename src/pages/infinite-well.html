@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파동함수 vs 확률밀도 - Quantum Visual Lab</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <a href="../../index.html" class="back-link">← 메인으로</a>
+        <h2>파동함수 vs 확률밀도</h2>
+        <p>무한 우물(Infinite Square Well) 모델에서의 파동함수와 관측 확률</p>
+      </header>
+
+      <div class="math-container" id="math-equations">
+        <!-- KaTeX 렌더링 영역 -->
+      </div>
+
+      <div class="control-panel">
+        <div class="control-group">
+          <span class="control-label">양자수 (n)</span>
+          <div class="n-buttons" id="n-buttons">
+            <button class="n-btn active" data-n="1">1</button>
+            <button class="n-btn" data-n="2">2</button>
+            <button class="n-btn" data-n="3">3</button>
+            <button class="n-btn" data-n="4">4</button>
+            <button class="n-btn" data-n="5">5</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <span class="control-label">우물 너비 (L)</span>
+          <div class="slider-container">
+            <input type="range" id="l-slider" min="0.5" max="2.0" step="0.1" value="1.0">
+            <span class="slider-val" id="l-value">1.0</span>
+          </div>
+        </div>
+
+        <div class="checkbox-group">
+          <label class="checkbox-label" style="color: #4cc9f0;">
+            <input type="checkbox" id="show-psi" checked> 파동함수 ψ(x)
+          </label>
+          <label class="checkbox-label" style="color: #ff9e3d;">
+            <input type="checkbox" id="show-prob" checked> 확률밀도 |ψ(x)|²
+          </label>
+        </div>
+      </div>
+
+      <div id="plot-div" class="graph-container"></div>
+
+      <div class="info-card">
+        <div class="info-stat" id="info-energy">현재 에너지 E_n = ...</div>
+        <div class="info-stat" id="info-nodes">마디(node) 개수: ...</div>
+        <div class="info-desc" id="info-desc">...</div>
+      </div>
+    </main>
+    <script type="module" src="./infinite-well.js"></script>
+  </body>
+</html>
